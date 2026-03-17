@@ -1,12 +1,9 @@
-operator = input("Enter an operator (+, -, *, /): ")
-num1 = float(input("Enter first num: "))
-num2 = float(input("Enter second num: "))
-
-if (operator == "+") :
-    print(f"{num1} + {num2} = {num1 + num2}")
-elif (operator == "-") :
-    print(f"{num1} - {num2} = {num1 - num2}")
-elif (operator == "*") :
-    print(f"{num1} * {num2} = {num1 * num2}")
-elif (operator == "/") :
-    print(f"{num1} / {num2} = {num1 / num2}")
+choice = input("(kg to lbs | lbs to kg): ")
+if (choice == "kg to lbs") :
+    kg = float(input("Enter kg: "))
+    print(f"{kg} kg = {kg * 2.205} lbs")
+elif (choice == "lbs to kg"):
+    lbs = float(input("Enter lbs: "))
+    print(f"{lbs} lbs = {lbs / 2.205} kg")
+else:
+    print("Invalid choice")
