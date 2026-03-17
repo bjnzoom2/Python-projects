@@ -1,2 +1,4 @@
 string = "unhifwueh"
-print(string[0:8:2])
+print(string[:10])
+print(string[2:])
+print(string[0:10:2])
