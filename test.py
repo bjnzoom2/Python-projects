@@ -1,6 +1,4 @@
-story = "The boy ate ____ and died from ____ "
-print(story)
-firstBlank =  input("Enter first blank: ")
-secondBlank =  input("Enter second blank: ")
-story = "The boy ate " + firstBlank + " and died from " + secondBlank
-print(story)
+x = 2
+for i in range(10) :
+    print(x)
+    x *= 2
