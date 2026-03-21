@@ -1,15 +1,32 @@
-dictionary = {
-    "a" : 1234,
-    "banana" : "akjd",
-    "zepto" : 0.000000000000000000001
+items = {
+    "Cola" : 1.00,
+    "Popcorn Small" : 1.50,
+    "Popcorn Medium" : 2.50,
+    "Popcorn Large" : 4.00
 }
 
-print(dictionary["zepto"])
-dictionary.update({"Germany" : "Berlin"})
-dictionary.pop("a")
+bought = []
 
-print(dictionary)
+balance = 8.00
+running = True
 
-print("\n")
-for i, j in dictionary.items():
-    print(i, j)
+while running:
+    choice = input("Buy  |  End\n")
+    if (choice == "Buy"):
+        item = input("Enter item name: ")
+        if (items.get(item) != None):
+            bought.append(item)
+            if (balance - items[item] >= 0):
+                balance -= items[item]
+                print(f"You bought {item}")
+            else:
+                print("Insufficient balance")
+            print(f"Balance: ${balance:.2f}")
+        else:
+            print("Invalid option")
+    elif (choice == "End"):
+        running = False
+
+print(f"Balance: {balance:.2f}")
+for i in items.keys():
+    print(f"{bought.count(i)}x {i}")
