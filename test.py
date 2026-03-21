@@ -1,35 +1,10 @@
-items = {
-    "Cola" : 1.00,
-    "Popcorn Small" : 1.50,
-    "Popcorn Medium" : 2.50,
-    "Popcorn Large" : 4.00
-}
+import random
+guessed = False
 
-bought = []
-
-balance = 8.00
-running = True
-
-while running:
-    choice = input("Buy  |  End\n")
-    if (choice == "Buy"):
-        item = input("Enter item name: ")
-        if (items.get(item) != None):
-            bought.append(item)
-            if (balance - items[item] >= 0):
-                balance -= items[item]
-                print(f"You bought {item}")
-            else:
-                print("Insufficient balance")
-            print(f"Balance: ${balance:.2f}")
-        else:
-            print("Invalid option")
-    elif (choice == "End"):
-        running = False
-    print("\n")
-
-print(f"Balance: ${balance:.2f}")
-for i in items.keys():
-    if (bought.count(i) == 0):
-        continue
-    print(f"{bought.count(i)}x {i}")
+while not guessed:
+    num = random.randint(0, 100)
+    if (input("Enter number: ") == str(num)):
+        print("Guessed correctly")
+        guessed = True
+    else:
+        print(f"Try again\nNumber was: {num}")
