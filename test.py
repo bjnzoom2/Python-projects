@@ -26,7 +26,10 @@ while running:
             print("Invalid option")
     elif (choice == "End"):
         running = False
+    print("\n")
 
-print(f"Balance: {balance:.2f}")
+print(f"Balance: ${balance:.2f}")
 for i in items.keys():
+    if (bought.count(i) == 0):
+        continue
     print(f"{bought.count(i)}x {i}")
