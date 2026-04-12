@@ -1,14 +1,6 @@
-class Car: 
-    speed = 0
-    
-    def __init__(self):
-        print("Hi")
-        
-    def accelerate(self, accel):
-        self.speed += accel
-        
-car1 = Car()
+import numpy as np
 
-for i in range(10):
-    car1.accelerate(i)
-    print("Speed:", car1.speed)
+array1 = np.array([[1], [2], [4]])
+array2 = np.array([[3, 4, 5]])
+
+print(array1 * array2)
